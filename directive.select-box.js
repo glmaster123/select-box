@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('IFSIPrototype')
+angular.module('glmaster.SelectBox', [])
 .directive('selectBox', function($timeout) {
   return {
     restrict: 'E',
