@@ -1,0 +1,52 @@
+ <div class="select-box-control">
+  <!-- Options List -->
+  <div class="select-box" ng-class="::{filter:allowFilter}">
+    <!-- All -->
+    <div
+      class="option pointer"
+      ng-if="::allOption.label"
+      ng-class="{selected:all}">
+      <div
+        class="ellipsis"
+        ng-click="toggleAll()">
+        All {{allOption.label}}
+      </div>
+    </div>
+    <!-- / All -->
+
+    <!-- Options -->
+    <div
+      class="option pointer"
+      ng-class="{selected:ids.indexOf(option.ID)>-1&&!all}"
+      ng-repeat="option in options | orderBy:['sort','Title'] | filter:{Title:filter}">
+      <div
+        class="ellipsis"
+        ng-if="option.ID!='All'"
+        ng-click="toggle(option.ID)">
+        {{option.Title}}
+      </div>
+    </div>
+    <!-- / Options -->
+  </div>
+  <!-- / Options List -->
+
+  <!-- Filter Input -->
+  <div ng-if="::allowFilter">
+    <input
+      type="text"
+      placeholder="Filter List"
+      ng-model="filter"
+    />
+  </div>
+  <!-- / Filter Input -->
+
+  <!-- Clear Selection -->
+  <a
+    href="javascript:;"
+    class="select-box-clear"
+    ng-show="::(clear&&allowEmptySelection)"
+    ng-click="deselectAll()">
+    Clear
+  </a>
+  <!-- / Clear Selection -->
+</div>

@@ -1,0 +1,48 @@
+.select-box-control {
+  position: relative;
+  border: 1px solid #cacaca;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  background-color: white;
+  color: black;
+}
+
+.select-box {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.select-box.filter {
+  height: calc(100% - 30px);
+}
+
+.select-box .option {
+  padding: 2px 0 2px 4px;
+}
+
+.select-box .option.selected {
+  background-color: #0d9ddb;
+  color: white;
+}
+
+.select-box-control input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #ccc;
+  height: 30px;
+  display: block;
+  width: 100%;
+}
+
+.select-box-control .clear-input a {
+  bottom: 3px;
+}
+
+.select-box-clear {
+  position: absolute;
+  top: -21px;
+  right: 0;
+  font-size: 0.875rem;
+}
