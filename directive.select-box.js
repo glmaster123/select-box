@@ -13,13 +13,13 @@ angular.module('glmaster.SelectBox', [])
       limit:'=',
       allowFilter:'='
     },
-    templateUrl: 'app/select-box/_select_box.html',
+    templateUrl: 'bower_components/glmaster.SelectBox/_select_box.html',
     link: function($scope, $element, $attrs, ctrls) {
       var ngModelCtrl = ctrls[0]
       ,   form = ctrls[1]
       ,   $input = $element.find('input')
       ;
-      console.log($scope.ids)
+
       $scope.filter = '';
 
       $timeout(function() {
